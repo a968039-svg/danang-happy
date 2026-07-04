@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>峴港食衣住行終極推薦榜</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1A73E8; /* 專業商務藍 */
+            --primary-light: #E8F0FE;
+            --dark: #2F2F2F;
+            --light: #F1F3F4;
+            --card-bg: #FFFFFF;
+            --gold: #FBBC05;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 25px 15px;
+            background: linear-gradient(135deg, var(--primary), #4285F4);
+            color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 12px rgba(26,115,232,0.15);
+        }
+
+        .header h1 { font-size: 1.4rem; margin-bottom: 5px; }
+        .header p { font-size: 0.85rem; opacity: 0.9; }
+
+        /* 分類導覽列 */
+        .category-nav {
+            display: flex;
+            background: white;
+            padding: 12px 5px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            justify-content: space-around;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #5f6368;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn.active {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        /* 內容區塊 */
+        .page-content {
+            display: none;
+            padding: 15px;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* 排行榜卡片 */
+        .rank-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: #E8F0FE;
+            color: var(--primary);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid var(--primary);
+        }
+
+        .rank-1 .rank-badge { background: #FDF2E9; color: #E67E22; border-color: #E67E22; }
+
+        .card-main {
+            margin-top: 5px;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #1A73E8;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .item-title:hover {
+            text-decoration: underline;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+        .item-desc {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .item-tag {
+            display: inline-block;
+            background: #F1F3F4;
+            color: #5F6368;
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 8px;
+            align-self: flex-start;
+        }
+
+        .map-btn {
+            margin-top: 10px;
+            background: #F1F3F4;
+            color: #1A73E8;
+            text-align: center;
+            padding: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .map-btn:active {
+            background: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>峴港自主遊 • 終極推薦榜</h1>
+        <p>食、衣、住、行 特輯 ｜ 點擊可直接開啟 Google Maps 導航</p>
+    </div>
+
+    <div class="category-nav">
+        <button class="nav-btn active" onclick="switchTab('eat', this)"><i class="fa-solid fa-utensils"></i>食</button>
+        <button class="nav-btn" onclick="switchTab('cloth', this)"><i class="fa-solid fa-shirt"></i>衣</button>
+        <button class="nav-btn" onclick="switchTab('live', this)"><i class="fa-solid fa-hotel"></i>住</button>
+        <button class="nav-btn" onclick="switchTab('move', this)"><i class="fa-solid fa-car"></i>行</button>
+    </div>
+
+    <div id="page-eat" class="page-content active">
+        <div class="rank-card rank-1">
+            <span class="rank-badge"><i class="fa-solid fa-crown"></i> TOP 1 在地經典</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=Pho+Hong+Da+Nang" target="_blank" class="item-title">Pho Hong (洪河粉)</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0</div>
+                <p class="item-desc">峴港知名度最高的爆汁牛肉河粉！湯頭濃郁清甜，配上油條跟特製辣椒醬簡直絕配，桌上的生豆芽菜可以免費加。</p>
+                <span class="item-tag">必點：牛肉河粉、炸春捲</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pho+Hong+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+        <div class="rank-card">
+            <span class="rank-badge">TOP 2 網美越菜</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=An+Thoi+Restaurant+Da+Nang" target="_blank" class="item-title">An Thoi Restaurant</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-solid fa-star-half-stroke"></i> 4.5</div>
+                <p class="item-desc">韓市場附近的超人氣黃色建築餐廳！裝潢極具會安風情，乾淨衛生且冷氣開放，非常適合第一天享用經典越式料理。</p>
+                <span class="item-tag">必點：蒜炒空心肉、鳳梨炒飯、春捲</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=An+Thoi+Restaurant+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+        <div class="rank-card">
+            <span class="rank-badge">TOP 3 點心首選</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=Happy+bread+MI+AA+Da+Nang" target="_blank" class="item-title">Happy bread MI AA</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 4.0</div>
+                <p class="item-desc">受觀光客熱烈喜愛的法國麵包(Bánh mì)名店，外皮烤得極度酥脆，內餡調味符合台灣人口味，現點現做非常適合當下午茶！</p>
+                <span class="item-tag">必點：JJ特製招牌法國麵包</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Happy+bread+MI+AA+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-cloth" class="page-content">
+        <div class="rank-card rank-1">
+            <span class="rank-badge"><i class="fa-solid fa-crown"></i> TOP 1 奧黛定做/租借</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sweet+Hoi+An" target="_blank" class="item-title">Sweet Hoi An (會安)</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0</div>
+                <p class="item-desc">安排奧黛旅拍的指定首選店！衣服款式多樣新穎，質地親膚。穿著充滿古典美的傳統奧黛，走在會安古城拍照最有儀式感。</p>
+                <span class="item-tag">建議下午 16:00 前往拍攝，避開烈日</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sweet+Hoi+An" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+        <div class="rank-card">
+            <span class="rank-badge">TOP 2 伴手禮購物</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=Han+Market+Da+Nang" target="_blank" class="item-title">漢市場 (Han Market)</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 4.0</div>
+                <p class="item-desc">想買便宜的東南亞風編織包、度假風洋裝、特色拖鞋或手工藝品，來這裡就對了。一樓賣伴手禮與腰果，二樓全是服飾與鞋包（記得大刀殺價！）。</p>
+                <span class="item-tag">必買：藤編包、度假洋裝、腰果果乾</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Han+Market+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-live" class="page-content">
+        <div class="rank-card rank-1">
+            <span class="rank-badge"><i class="fa-solid fa-crown"></i> TOP 1 CP值沙灘海景</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sofiana+My+Khe+Hotel+Da+Nang" target="_blank" class="item-title">Sofiana My Khe Hotel</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0</div>
+                <p class="item-desc">美溪沙灘旁的超級神店！一晚大約 $3,192 卻附帶無敵大禮包。每間客房都免費招待一杯生啤酒和 20 分鐘頂級水療，還免費提供機場接送，誠意滿滿！</p>
+                <span class="item-tag">好康：贈生啤酒、20分水療、免費機場接送</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sofiana+My+Khe+Hotel+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+        <div class="rank-card">
+            <span class="rank-badge">TOP 2 五星奢華享受</span>
+            <div class="card-main">
+                <a href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Da+Nang" target="_blank" class="item-title">峴港希爾頓花園酒店</a>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 4.9</div>
+                <p class="item-desc">國際連鎖知名品牌，品質保證！海景高樓層視野無懈可擊，頂樓的無邊際高空泳池拍照超級美，是中段旅程想要徹底放鬆與享受奢華的第一選擇。</p>
+                <span class="item-tag">亮點：希爾頓無邊際絕美頂樓泳池</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hilton+Garden+Inn+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-move" class="page-content">
+        <div class="rank-card rank-1">
+            <span class="rank-badge"><i class="fa-solid fa-crown"></i> TOP 1 叫車免動腦</span>
+            <div class="card-main">
+                <span class="item-title" style="color:var(--dark);"><i class="fa-brands fa-google-play" style="color:#1A73E8;"></i> 手機下載 Grab App</span>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 5.0</div>
+                <p class="item-desc">在越南旅遊的絕對神仙工具！介面全繁體中文，出發前直接綁定台灣信用卡，系統公開透明報價，司機完全無法繞路或亂喊價，安全度百分百。</p>
+                <span class="item-tag">防詐必備：認明車牌與 Grab 畫面再上車</span>
+            </div>
+        </div>
+        <div class="rank-card">
+            <span class="rank-badge">TOP 2 遠程包車</span>
+            <div class="card-main">
+                <span class="item-title" style="color:var(--dark);"><i class="fa-solid fa-car-side" style="color:#1A73E8;"></i> KKday 預約市區/巴拿山包車</span>
+                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> 4.5</div>
+                <p class="item-desc">去巴拿山一日遊或山茶半島靈應寺，因為山區不好單獨叫回程車，強烈建議提早用 KKday 預約好 5 小時或全天包車，司機會在停車場耐心等候，玩得更安心。</p>
+                <span class="item-tag">密技：山茶半島回程不好叫車，包車最省心</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId, btnElement) {
+            // 隱藏所有分頁內容
+            const contents = document.querySelectorAll('.page-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // 取消所有按鈕的 active 狀態
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // 顯示當前點選的分頁與 active 狀態
+            document.getElementById(`page-${tabId}`).classList.add('active');
+            btnElement.classList.add('active');
+
+            // 畫面平滑捲動回最上方
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
