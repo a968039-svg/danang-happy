@@ -76,13 +76,14 @@
             color: var(--primary);
         }
 
+        /* 修正關鍵點：確保這段控制顯示/隱藏的 CSS 權重正確，且沒有衝突 */
         .page-content {
-            display: none;
+            display: none !important;
             padding: 15px;
         }
 
         .page-content.active {
-            display: block;
+            display: block !important;
         }
 
         .rank-card {
@@ -205,150 +206,145 @@
         <div class="rank-card rank-1">
             <span class="rank-badge"><i class="fa-solid fa-crown"></i> NO.1 頂級評分</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Pho+Hong+Da+Nang" target="_blank" class="item-title">Pho Hong (洪河粉)</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pho+Hong+Danang" target="_blank" class="item-title">Pho Hong (洪河粉)</a>
                 <div class="stars-row">
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <span class="score-num">4.9 / 5.0</span>
                 </div>
                 <p class="item-desc">峴港名氣最響亮的牛肉河粉，湯頭清甜甘美。隨粉附贈一盤香草與生豆芽，一定要加點炸春捲泡進湯裡吃！</p>
                 <span class="item-tag">在地小吃 ｜ 推薦：熟牛肉河粉、炸春捲</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Pho+Hong+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pho+Hong+Danang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
         <div class="rank-card rank-2">
             <span class="rank-badge">NO.2 熱門網美</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=An+Thoi+Restaurant+Da+Nang" target="_blank" class="item-title">An Thoi Restaurant</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=An+Thoi+Restaurant+Danang" target="_blank" class="item-title">An Thoi Restaurant</a>
                 <div class="stars-row">
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <span class="score-num">4.8 / 5.0</span>
                 </div>
                 <p class="item-desc">位於韓市場旁的網美風越菜餐廳，冷氣開放且乾淨。黃色意象裝潢極具會安風情，味道完全迎合觀光客口味。</p>
                 <span class="item-tag">越式精緻料理 ｜ 推薦：蒜炒空心菜、鳳梨炒飯</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=An+Thoi+Restaurant+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=An+Thoi+Restaurant+Danang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
         <div class="rank-card rank-3">
             <span class="rank-badge">NO.3 特色景觀</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Son+Tra+Marina+Da+Nang" target="_blank" class="item-title">Sơn Trà Marina</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Son+Tra+Marina+Danang" target="_blank" class="item-title">Sơn Trà Marina</a>
                 <div class="stars-row">
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
                     <span class="score-num">4.7 / 5.0</span>
                 </div>
                 <p class="item-desc">位於山茶半島海濱，藍白相間的希臘聖托里尼風海景咖啡廳。極具視覺震撼，看海喝椰子冰沙超級愜意。</p>
                 <span class="item-tag">海景咖啡廳 ｜ 推薦：椰子冰沙咖啡</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Son+Tra+Marina+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Son+Tra+Marina+Danang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
         <div class="rank-card">
             <span class="rank-badge">NO.4 家常溫馨</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Com+Nha+Linh+Da+Nang" target="_blank" class="item-title">Cơm Nhà Linh</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Com+Nha+Linh+Danang" target="_blank" class="item-title">Cơm Nhà Linh</a>
                 <div class="stars-row">
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
                     <span class="score-num">4.6 / 5.0</span>
                 </div>
                 <p class="item-desc">主打傳統越式復古「家常飯」的小店。焦糖魚、砂鍋爌肉和炸春捲深具靈魂，想體驗道地民家餐桌點這家就對了。</p>
                 <span class="item-tag">越式家常菜 ｜ 推薦：焦糖爌肉、越式酸湯</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Com+Nha+Linh+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Com+Nha+Linh+Danang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
         <div class="rank-card">
             <span class="rank-badge">NO.5 頂級庭園</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Madame+Lan+Da+Nang" target="_blank" class="item-title">Madame Lân (蘭夫人)</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Madame+Lan+Danang" target="_blank" class="item-title">Madame Lân (蘭夫人)</a>
                 <div class="stars-row">
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <span class="score-num">4.5 / 5.0</span>
                 </div>
                 <p class="item-desc">江邊的大型中高檔越式莊園餐廳。環境典雅大氣，集合了全越南大南北各地的經典小吃，招待朋友絕不失禮。</p>
                 <span class="item-tag">宴席越菜 ｜ 推薦：越式煎餅 (Bánh xèo)、甘蔗蝦</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Madame+Lan+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Madame+Lan+Danang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
-        <div class="rank-card">
-            <span class="rank-badge">NO.6 異國度假</span>
+        </div>
+
+    <div id="tab-spa" class="page-content">
+        
+        <div class="rank-card rank-1">
+            <span class="rank-badge"><i class="fa-solid fa-crown"></i> NO.1 洗頭按摩天花板</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Esco+Beach+Bar+Da+Nang" target="_blank" class="item-title">Esco Beach Bar</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tree+Spa+Da+Nang" target="_blank" class="item-title">Tree Spa Da Nang</a>
                 <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.5 / 5.0</span>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <span class="score-num">4.9 / 5.0</span>
                 </div>
-                <p class="item-desc">座落在美溪沙灘第一排的複合式海景餐廳酒吧，每逢週二、五、六晚上 21:30 有精彩的精彩火舞秀表演。</p>
-                <span class="item-tag">沙灘餐酒館 ｜ 推薦：調酒、美式炸物、海鮮披薩</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Esco+Beach+Bar+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <p class="item-desc">台灣觀光客與行程大力推薦的名店！越式洗頭與舒壓按摩手技純熟、抓筋精準。附帶貼心的遠程免費接駁服務。</p>
+                <span class="item-tag">亮點：精湛越式洗頭、草本頭皮護理</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tree+Spa+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
-        <div class="rank-card">
-            <span class="rank-badge">NO.7 神級法棍</span>
+        <div class="rank-card rank-2">
+            <span class="rank-badge">NO.2 頂級法式貴婦</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Happy+Bread+MI+AA+Da+Nang" target="_blank" class="item-title">Happy Bread MI AA</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Lani+Spa+Da+Nang" target="_blank" class="item-title">Lani Spa Da Nang</a>
                 <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.4 / 5.0</span>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <span class="score-num">4.9 / 5.0</span>
                 </div>
-                <p class="item-desc">韓市場旁大名鼎鼎的觀光客法棍名店，麵包烘烤到極其酥脆，抹上罪惡的肝醬、煎蛋跟叉燒肉，調味非常適合台灣人。</p>
-                <span class="item-tag">法國麵包 ｜ 推薦：招牌 JJ 脆皮法國麵包</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Happy+Bread+MI+AA+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <p class="item-desc">主打法式莊園裝潢的高級水療中心，環境香氛極度令人放鬆。按摩師動作極為優雅溫柔。</p>
+                <span class="item-tag">亮點：奢華芳療、招牌精油熱石療程</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Lani+Spa+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
-        <div class="rank-card">
-            <span class="rank-badge">NO.8 網美秘境</span>
+        <div class="rank-card rank-3">
+            <span class="rank-badge">NO.3 韓國超狂口碑</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Cua+Ngo+Cafe+Da+Nang" target="_blank" class="item-title">Cửa Ngõ Café</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Golden+Lotus+Spa+Danang" target="_blank" class="item-title">Golden Lotus Spa</a>
                 <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.4 / 5.0</span>
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <span class="score-num">4.8 / 5.0</span>
                 </div>
-                <p class="item-desc">峴港巷弄內的土色系摩洛哥風唯美咖啡廳。拱門與編織地毯拍照極美，點一杯越式鹽咖啡或蛋咖啡非常享受。</p>
-                <span class="item-tag">特色咖啡 ｜ 推薦：招牌鹽咖啡 (Salt Coffee)</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Cua+Ngo+Cafe+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
+                <p class="item-desc">在韓國圈中排名第一的頂級連鎖有機 SPA，手法結合了越式精油與泰式拉筋，按完會提供免費的新新鮮水果。</p>
+                <span class="item-tag">亮點：東方有機精油按摩、高隱私包廂</span>
+                <a href="https://www.google.com/maps/search/?api=1&query=Golden+Lotus+Spa+Danang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
         </div>
 
-        <div class="rank-card">
-            <span class="rank-badge">NO.9 在地甜湯</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Che+Lien+Da+Nang" target="_blank" class="item-title">Chè Liên (連記甜品)</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.3 / 5.0</span>
-                </div>
-                <p class="item-desc">峴港無人不知的傳統越式甜湯(Chè)扛霸子！招牌榴槤椰奶極度濃郁，雖然排隊人潮洶湧，打外帶速度極快。</p>
-                <span class="item-tag">越式甜點 ｜ 推薦：榴槤酪梨椰奶甜湯、焦糖布丁</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Che+Lien+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
         </div>
 
-        <div class="rank-card">
-            <span class="rank-badge">NO.10 越式經典連鎖</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Cong+Ca+Phe+Da+Nang" target="_blank" class="item-title">Cộng Cà Phê (共產咖啡)</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.3 / 5.0</span>
-                </div>
-                <p class="item-desc">以北越復古軍裝綠為主題的懷舊連鎖咖啡廳。全店充滿歷史文青感，招牌的椰子冰沙咖啡濃郁消暑，全越南必喝。</p>
-                <span class="item-tag">特色咖啡 ｜ 推薦：椰子冰沙咖啡</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Cong+Ca+Phe+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
+    <script>
+        function switchTab(tabId, btnElement) {
+            // 1. 隱藏所有頁面內容
+            const contents = document.querySelectorAll('.page-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
 
-        <div class="rank-card">
-            <span class="rank-badge">NO.11 海鮮巨頭</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Hai+San+Moc+Quan+Da+Nang" target="_blank" class="item-title">Hải Sản Mộc Quán</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.2 / 5.0</span>
-                </div>
-                <p class="item-desc">這家店在台灣與韓國暴紅，主打不坑觀光客、現撈現秤現煮的肥美活海鮮，竹編與綠意裝潢非常有氛圍。</p>
-                <span class="item-tag">海鮮熱炒 ｜ 推薦：美乃滋烤蝦、
+            // 2. 取消所有導航按鈕的 active 高亮狀態
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 3. 顯示被點擊的對應頁面並高亮該按鈕
+            const targetPage = document.getElementById(`tab-${tabId}`);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            btnElement.classList.add('active');
+
+            // 4. 網頁流暢滾動回最頂部
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
