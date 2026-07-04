@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #1A73E8; /* 專業商務藍 */
+            --primary: #1A73E8; 
             --primary-light: #E8F0FE;
             --dark: #2F2F2F;
             --light: #F1F3F4;
@@ -45,7 +45,6 @@
         .header h1 { font-size: 1.3rem; margin-bottom: 5px; }
         .header p { font-size: 0.85rem; opacity: 0.9; }
 
-        /* 分類導覽列 */
         .category-nav {
             display: flex;
             background: white;
@@ -77,7 +76,6 @@
             color: var(--primary);
         }
 
-        /* 內容區塊 */
         .page-content {
             display: none;
             padding: 15px;
@@ -87,7 +85,6 @@
             display: block;
         }
 
-        /* 排行榜卡片 */
         .rank-card {
             background: var(--card-bg);
             border-radius: 14px;
@@ -110,7 +107,6 @@
             border: 1px solid #DADCE0;
         }
 
-        /* 前三名亮色設計 */
         .rank-1 .rank-badge { background: #FEF7E0; color: #B06000; border-color: #FBBC05; }
         .rank-2 .rank-badge { background: #F1F3F4; color: #3C4043; border-color: #BDC1C6; }
         .rank-3 .rank-badge { background: #FCE8E6; color: #C5221F; border-color: #F28B82; }
@@ -204,7 +200,7 @@
         <button class="nav-btn" onclick="switchTab('spa', this)"><i class="fa-solid fa-spa"></i> 按摩 SPA (20)</button>
     </div>
 
-    <div id="page-eat" class="page-content active">
+    <div id="tab-eat" class="page-content active">
         
         <div class="rank-card rank-1">
             <span class="rank-badge"><i class="fa-solid fa-crown"></i> NO.1 頂級評分</span>
@@ -326,7 +322,7 @@
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <span class="score-num">4.3 / 5.0</span>
                 </div>
-                <p class="item-desc">峴港無人不知的傳統越式甜湯(Chè)扛霸子！招牌榴槤椰奶極度濃郁，雖然排隊人潮洶湧，但翻桌速度與外帶速度極快。</p>
+                <p class="item-desc">峴港無人不知的傳統越式甜湯(Chè)扛霸子！招牌榴槤椰奶極度濃郁，雖然排隊人潮洶湧，打外帶速度極快。</p>
                 <span class="item-tag">越式甜點 ｜ 推薦：榴槤酪梨椰奶甜湯、焦糖布丁</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Che+Lien+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
             </div>
@@ -349,160 +345,10 @@
         <div class="rank-card">
             <span class="rank-badge">NO.11 海鮮巨頭</span>
             <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Hai+San+Moc+Quan+Da+Nang" target="_blank" class="item-title">Hải Sản Mộc Quán (木頭海鮮)</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hai+San+Moc+Quan+Da+Nang" target="_blank" class="item-title">Hải Sản Mộc Quán</a>
                 <div class="stars-row">
                     <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <span class="score-num">4.2 / 5.0</span>
                 </div>
                 <p class="item-desc">這家店在台灣與韓國暴紅，主打不坑觀光客、現撈現秤現煮的肥美活海鮮，竹編與綠意裝潢非常有氛圍。</p>
-                <span class="item-tag">海鮮熱炒 ｜ 推薦：美乃滋烤蝦、蒜炒大螃蟹</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Hai+San+Moc+Quan+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.12 炭火燒肉</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Thung+Phi+BBQ+Da+Nang" target="_blank" class="item-title">Thùng Phi BBQ</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.2 / 5.0</span>
-                </div>
-                <p class="item-desc">低矮桌椅的路邊鐵桶炭火燒肉。肉品有用特製越式醬汁醃製，香氣撲鼻，價格相當親民，大口咬肉大口喝越南啤酒極爽快。</p>
-                <span class="item-tag">越式燒烤 ｜ 推薦：醬燒豬五花、烤大蝦</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Thung+Phi+BBQ+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.13 在地烤肉米線</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Bun+Cha+Ong+Ta+Da+Nang" target="_blank" class="item-title">Bún Chả Ông Tạ</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.1 / 5.0</span>
-                </div>
-                <p class="item-desc">老字號的北越經典烤肉米線(Bún Chả)。將沾滿炭火香氣的豬肉餅與烤肉片浸泡在酸甜魚露醬汁裡，搭配米線與生菜，開胃清爽。</p>
-                <span class="item-tag">越式米線 ｜ 推薦：招牌綜合烤肉米線</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Bun+Cha+Ong+Ta+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.14 越式高級牛排</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=BABA+Steakhouse+Da+Nang" target="_blank" class="item-title">BABA Steakhouse</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.1 / 5.0</span>
-                </div>
-                <p class="item-desc">想換換口味吃西餐？這家牛排館在當地觀光客評價甚高。肉質軟嫩、分量厚實，醬汁調得十分獨特，重點是價格比台灣便宜非常多！</p>
-                <span class="item-tag">西式餐飲 ｜ 推薦：石板熟成肋眼牛排</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=BABA+Steakhouse+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.15 街頭鴨肉麵</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Mien+Ga+Dong+Cac+Da+Nang" target="_blank" class="item-title">Miến Gà Đông Các</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.0 / 5.0</span>
-                </div>
-                <p class="item-desc">深受當地市民喜愛的隱藏街頭小吃，主打冬粉與油麵雞鴨肉湯麵。湯頭使用大量雞骨熬煮，滋味醇厚鮮美，肉質扎實不柴。</p>
-                <span class="item-tag">在地麵食 ｜ 推薦：鴨肉冬粉湯 (Miến Vịt)</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Mien+Ga+Dong+Cac+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.16 傳統脆皮煎餅</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Banh+Xeo+Ba+Duong+Da+Nang" target="_blank" class="item-title">Bánh Xèo Bà Dưỡng</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.0 / 5.0</span>
-                </div>
-                <p class="item-desc">隱身在深巷裡的傳奇薑黃脆皮煎餅(Bánh xèo)老店。煎餅用米紙包著生菜、青芒果絲與豬肉串，沾特製花生肝醬吃極其罪惡。</p>
-                <span class="item-tag">傳統點心 ｜ 推薦：越式煎餅、炭烤豬肉串 (Nem lụi)</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Banh+Xeo+Ba+Duong+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.17 廣南傳統麵</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Mi+Quang+Ba+Mua+Da+Nang" target="_blank" class="item-title">Mì Quảng Bà Mua</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">3.9 / 5.0</span>
-                </div>
-                <p class="item-desc">中越南部代表性的「廣南薑黃拌麵(Mì Quảng)」。寬扁黃色麵條僅加入少許濃郁滷汁，放上鮮蝦、豬肉與花生碎和碎脆餅，層次感豐富。</p>
-                <span class="item-tag">特色拌麵 ｜ 推薦：招牌綜合廣南拌麵</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Mi+Quang+Ba+Mua+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.18 江邊老牌海鮮</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Hai+San+Be+Man+Da+Nang" target="_blank" class="item-title">Hải Sản Bé Mặn</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">3.8 / 5.0</span>
-                </div>
-                <p class="item-desc">海濱大道旁規模最龐大的草根在地海鮮大排檔。海鮮極其新鮮、客流極大，不過環境較市區吵雜，點餐秤重時一定要盯緊價格！</p>
-                <span class="item-tag">海鮮排檔 ｜ 推薦：炭烤大章魚、椒鹽香酥蝦</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Hai+San+Be+Man+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.19 經典高樓麵</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Quan+Cao+Lau+Thanh+Da+Nang" target="_blank" class="item-title">Quán Cao Lầu Thanh</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">3.8 / 5.0</span>
-                </div>
-                <p class="item-desc">不用去會安也能在峴港吃到道地的高樓麵(Cao Lầu)！口感扎實極富嚼勁的麵條，淋上獨門醬汁與厚實叉燒片，非常奇特美味。</p>
-                <span class="item-tag">中越特色麵 ｜ 推薦：傳統會安高樓麵</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Quan+Cao+Lau+Thanh+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-badge">NO.20 老字號越式雞飯</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Com+Ga+A+Hai+Da+Nang" target="_blank" class="item-title">Cơm Gà A Hải</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">3.7 / 5.0</span>
-                </div>
-                <p class="item-desc">峴港名氣極響的脆皮炸雞飯(Cơm Gà)。大隻雞腿炸到金黃酥脆，雞汁完全鎖在肉裡，搭配雞油炊煮的薑黃飯，樸實美味。</p>
-                <span class="item-tag">越式雞飯 ｜ 推薦：脆皮大雞腿薑黃飯</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Com+Ga+A+Hai+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="page-spa" class="page-content">
-        
-        <div class="rank-card rank-1">
-            <span class="rank-badge"><i class="fa-solid fa-crown"></i> NO.1 洗頭按摩天花板</span>
-            <div class="card-main">
-                <a href="https://www.google.com/maps/search/?api=1&query=Tree+Spa+Da+Nang" target="_blank" class="item-title">Tree Spa Da Nang</a>
-                <div class="stars-row">
-                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <span class="score-num">4.9 / 5.0</span>
-                </div>
-                <p class="item-desc">台灣觀光客與行程大力推薦的名店！越式洗頭與舒壓按摩手技純熟、抓筋精準。附帶貼心的遠程免費接駁服務，回訪率超高！</p>
-                <span class="item-tag">亮點：精湛越式洗頭、草本頭皮護理</span>
-                <a href="https://www.google.com/maps/search/?api=1&query=Tree+Spa+Da+Nang" target="_blank" class="map-btn"><i class="fa-solid fa-map-location-dot"></i> Google Map 導航</a>
-            </div>
-        </div>
-
-        <div class="rank-card rank-2">
-            <span class="rank-badge">NO.2 頂級法式貴婦</span>
+                <span class="item-tag">海鮮熱炒 ｜ 推薦：美乃滋烤蝦、
